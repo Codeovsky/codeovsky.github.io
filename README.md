@@ -1,1 +1,4 @@
 # CodeOvsky
+
+## Run
+hugo serve
