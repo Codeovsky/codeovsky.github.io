@@ -1,4 +1,7 @@
 # CodeOvsky
 
 ## Run
+
+```
 hugo serve
+```
