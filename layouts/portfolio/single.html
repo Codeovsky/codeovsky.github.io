@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section class="site-portfolio-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="site-portfolio-single-header">
+          <span class="category">
+            {{ range .Params.category }}{{ . }} {{ end }}
+          </span>
+          <h1>{{ .Title }}</h1>
+        </div>
+
+        <div class="site-portfolio-single-content">
+          {{ .Content }}
+
+          {{ with .Params.project_url }}
+          <a href="{{ . }}" target="_blank" rel="noopener" class="portfolio-project-link">
+            Visit the live project <i class="fa fa-external-link"></i>
+          </a>
+          {{ end }}
+        </div>
+
+        {{ with .Params.project_images }}
+        <div class="site-portfolio-single-images">
+          {{ range . }}
+          <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy">
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,128 @@
+// -------- Services Section --------
+.site-services {
+  padding: 100px 0;
+  background-color: #fafafa;
+
+  &-item {
+    background: #ffffff;
+    padding: 36px 28px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    height: calc(100% - 30px);
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      border-color: #eaa4a4;
+    }
+
+    &-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(234, 164, 164, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      i {
+        font-size: 24px;
+        color: #eaa4a4;
+      }
+    }
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 15px;
+      margin: 0;
+    }
+  }
+}
+
+// -------- Contact page additions (alongside theme's .site-contact) --------
+.site-contact-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 30px;
+
+  li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    i {
+      color: #eaa4a4;
+      width: 20px;
+    }
+
+    a { color: inherit; }
+    a:hover { color: #eaa4a4; }
+  }
+}
+
+.site-contact-info-content {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+
+  a { color: #eaa4a4; }
+}
+
+// -------- Math captcha row inside the form --------
+.captcha-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+
+  label {
+    margin: 0;
+    white-space: nowrap;
+    font-weight: 500;
+    color: #333;
+  }
+
+  input[type="number"] {
+    max-width: 100px;
+    flex-shrink: 0;
+  }
+}
+
+.form-status {
+  margin-top: 12px;
+  font-size: 14px;
+  min-height: 20px;
+
+  &.success { color: #2c8a3a; }
+  &.error { color: #c0392b; }
+}
+
+// -------- Portfolio "Visit live project" link --------
+.portfolio-project-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: #eaa4a4;
+  font-weight: 500;
+
+  i { margin-left: 6px; }
+  &:hover { text-decoration: underline; }
+}
+
+// -------- Responsive --------
+@media (max-width: 768px) {
+  .site-services { padding: 60px 0; }
+  .site-services-item { padding: 28px 22px; }
+}
