@@ -6,6 +6,10 @@ services:
     title: "Web Applications"
     description: "Custom apps that fit how your business actually works — not how some template thinks it should."
 
+  - icon: "fa-mobile"
+    title: "Mobile App Development"
+    description: "iOS, Android, cross-platform. Apps people actually want to open — and that don't break on real devices."
+
   - icon: "fa-database"
     title: "Databases & Infrastructure"
     description: "Clean data models, fast queries, and the boring-but-critical plumbing that keeps everything running."
@@ -37,6 +41,10 @@ services:
   - icon: "fa-pencil"
     title: "Content Production"
     description: "Scripts, posts, videos, articles. Written by people who can read your room."
+
+  - icon: "fa-life-ring"
+    title: "Ongoing Support"
+    description: "We don't disappear after launch. Maintenance, fixes, small features, and someone to actually pick up the phone."
 
   - icon: "fa-comments"
     title: "Customer Support"

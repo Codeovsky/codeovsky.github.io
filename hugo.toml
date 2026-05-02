@@ -1,6 +1,6 @@
 baseURL       = "https://codeovsky.com/"
 languageCode  = "en-us"
-title         = "CodeOvsky | Web, Cloud, Design & Marketing for Growing Businesses"
+title         = "CodeOvsky | Apps, Cloud, Branding, Growth, Security & Support"
 theme         = "roxo-hugo"
 summarylength = 25
 
@@ -43,7 +43,7 @@ summarylength = 25
     enable                = true
     background_image      = "images/backgrounds/hero-background.png"
     heading               = "We help businesses grow. Not gigs — partnerships."
-    tagline               = "WEB · CLOUD · DESIGN · GROWTH"
+    tagline               = "APPS · CLOUD · BRANDING · GROWTH · SECURITY · SUPPORT"
     primary_button        = "See Our Work"
     primary_button_url    = "portfolio"
     secondary_button      = "Get in Touch"

@@ -1,12 +1,15 @@
 <head>
   <meta charset="utf-8" />
-  <title>{{ .Title }}</title>
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title | plainify }} | {{ .Site.Title }}{{ end }}</title>
 
   {{ "<!-- mobile responsive meta -->" | safeHTML }}
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   {{ with .Site.Params.author }}
   <meta name="author" content="{{ . }}">
+  {{ end }}
+  {{ with .Description | default .Site.Params.description }}
+  <meta name="description" content="{{ . | plainify }}">
   {{ end }}
   {{ hugo.Generator }}
 
