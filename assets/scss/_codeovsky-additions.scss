@@ -1071,3 +1071,394 @@ button.site-animations-card {
     border-radius: 6px;
   }
 }
+
+// =============================================
+// CodeOvsky — brand redesign overrides
+// Dark navbar, dark footer, hero overlay,
+// section accent fixes for the new palette.
+// =============================================
+
+// ---------- Navbar: dark with white logo ----------
+.site-navigation {
+  background: $surface-dark !important;
+
+  @include desktop {
+    background: $surface-dark !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .navbar-brand img {
+    max-width: 140px; // new logo is wider than the old square one — bump up
+  }
+
+  .nav-item .nav-link {
+    color: $on-dark-text !important;
+    font-weight: 500;
+
+    &:hover {
+      color: $primary-color !important;
+    }
+  }
+
+  // Active / current page link
+  .nav-item.active .nav-link,
+  .nav-item .nav-link.active {
+    color: $primary-color !important;
+  }
+
+  // "Get in touch" CTA pill in the navbar
+  .nav-item:last-child .nav-link {
+    background: $primary-color;
+    color: $text-color-dark !important;
+    border-radius: 100px;
+    padding: 10px 22px !important;
+    font-weight: 600;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background: lighten($primary-color, 6%);
+      color: $text-color-dark !important;
+      transform: translateY(-1px);
+    }
+  }
+
+  .navbar-toggler .icon-bar {
+    background: $primary-color;
+  }
+
+  &.nav-bg {
+    background: $surface-dark !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  }
+}
+
+// Inner pages need top padding because navbar is now solid/fixed
+body main { padding-top: 90px; }
+body:has(.site-hero) main { padding-top: 0; }
+@media (max-width: 768px) {
+  body main { padding-top: 76px; }
+}
+
+// ---------- Hero: dark overlay so headline reads on any bg ----------
+.site-hero {
+  position: relative;
+  overflow: hidden;        // kills horizontal scroll from overlay/bg
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;   // safer than `inset` for older Bootstrap layouts
+    background: linear-gradient(
+      135deg,
+      rgba(29, 35, 49, 0.88) 0%,
+      rgba(29, 35, 49, 0.70) 60%,
+      rgba(29, 35, 49, 0.92) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  > .container,
+  &-scroll {
+    position: relative;
+    z-index: 2;
+  }
+
+  &-content {
+    h1 {
+      color: $white;
+      span { color: $primary-color; }
+    }
+
+    h6, .tagline, p:first-child {
+      color: $primary-color !important;
+      letter-spacing: 4px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+  }
+
+  &-scroll img { filter: brightness(0) invert(1); }
+}
+
+// Belt-and-suspenders: prevent any descendant from causing horizontal scroll
+html, body { overflow-x: hidden; }
+
+// ---------- Footer: dark navy with white logo ----------
+.site-footer {
+  background: $surface-dark !important;
+  color: $on-dark-text;
+
+  &-widget-title {
+    color: $white;
+    position: relative;
+    padding-bottom: 12px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 32px;
+      height: 2px;
+      background: $primary-color;
+    }
+  }
+
+  &-widget-description {
+    color: $on-dark-text;
+    a { color: $primary-color; &:hover { color: lighten($primary-color, 8%); } }
+  }
+
+  &-widget-links li a {
+    color: $on-dark-text;
+    &:hover { color: $primary-color; text-decoration: none; }
+  }
+
+  &-widget-top p { color: $on-dark-text; }
+
+  &-copyright p { color: $on-dark-muted; }
+  &-copyright a { color: $primary-color; }
+
+  // Footer logo — new white PNG; size it sensibly
+  &-logo img { max-width: 180px; height: auto; }
+}
+
+// ---------- CTA section: paint it dark ----------
+.site-cta {
+  background: $surface-dark;
+  color: $white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(142, 254, 1, 0.10) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(139, 83, 254, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  > .container { position: relative; z-index: 1; }
+
+  &-title { color: $white; }
+}
+
+// ---------- Animations / dark sections — recolor accents ----------
+.site-animations {
+  background-color: $surface-dark;
+
+  &::before {
+    background: radial-gradient(circle, rgba(142, 254, 1, 0.18) 0%, transparent 70%);
+  }
+
+  &-card-client {
+    color: $primary-color;
+  }
+
+  &-card-play {
+    background: $primary-color;
+    i { color: $text-color-dark; }
+  }
+
+  &-card:hover .site-animations-card-play {
+    background: lighten($primary-color, 4%);
+  }
+}
+
+// ---------- Featured / portfolio cards — accent recolor ----------
+.site-featured-card {
+  &-tags span { color: $secondary-color; }   // violet eyebrow tags
+  &-cta { color: $primary-color; }
+
+  &:hover { box-shadow: 0 18px 50px rgba(29, 35, 49, 0.12); }
+}
+
+// ---------- Services section — icon backgrounds ----------
+.site-services-item {
+  &-icon {
+    background: linear-gradient(
+      135deg,
+      rgba(142, 254, 1, 0.18),
+      rgba(139, 83, 254, 0.10)
+    );
+    i { color: $text-color-dark; }
+  }
+
+  &:hover { border-color: $primary-color; }
+}
+
+// ---------- Process section number gradient ----------
+.site-process-item-number {
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+// ---------- Portfolio header / single page accents ----------
+.site-portfolio-header-title span,
+.site-portfolio-single-header h1 span {
+  color: $primary-color;
+}
+
+.site-portfolio-single-tags span {
+  background: rgba(142, 254, 1, 0.14);
+  color: darken($primary-color, 35%);    // green on green-tint needs darkening
+}
+
+.site-portfolio-single-visit {
+  background: $text-color-dark;
+
+  &:hover {
+    background: $primary-color;
+    color: $text-color-dark;
+  }
+}
+
+.site-portfolio-single-body a { color: darken($primary-color, 30%); }
+
+// ---------- About page accents ----------
+.site-about-page-eyebrow,
+.site-intro-eyebrow { color: $primary-color; }
+
+.site-intro-heading span,
+.site-intro-cta { color: $primary-color; }
+
+.site-about-page-expertise {
+  background: $surface-dark;
+  &-list li::before { background: $primary-color; }
+}
+
+// ---------- About page (theme partial) — peach tile to navy ----------
+.site-about-company { background: $surface-dark; }
+
+// ---------- Contact / form ----------
+.site-contact-title span { color: $primary-color; }
+
+.form-control {
+  border-color: rgba(29, 35, 49, 0.18);
+  &:focus { border-color: $primary-color; }
+}
+
+.captcha-row input[type="number"]:focus {
+  border-color: $primary-color;
+  outline: 0;
+}
+
+// ---------- Mobile portfolio store button ----------
+.site-portfolio-single-mobile-store {
+  background: $text-color-dark;
+  &:hover { background: $primary-color; color: $text-color-dark; }
+}
+
+// ---------- Video modal close button hover tint ----------
+.site-video-modal-close:hover { background: rgba(142, 254, 1, 0.25); }
+
+// ---------- Contact page accents ----------
+.site-contact {
+  // Icons (theme uses Font Awesome <i> tags inside contact items)
+  i, .fa, .fas, .far, .fab,
+  [class^="ti-"], [class*=" ti-"] {
+    color: $primary-color !important;
+  }
+
+  // Email / link in body copy
+  a {
+    color: $primary-color;
+    &:hover { color: darken($primary-color, 10%); text-decoration: underline; }
+  }
+
+  // "Prefer email? info@codeovsky.com" inline link
+  p a, .site-contact-info-content a {
+    color: $primary-color !important;
+  }
+
+  // Title accent span (already covered, but reinforce)
+  &-title span { color: $primary-color; }
+}
+
+// Custom contact info list (the one in additions)
+.site-contact-info-list i { color: $primary-color !important; }
+.site-contact-info-list li a:hover { color: $primary-color; }
+
+// ---------- Counter section: dark navy with green accents ----------
+.site-counter {
+  background: $surface-dark !important;
+  color: $white;
+
+  h2, h3, h4 { color: $white; }
+
+  // The big numbers
+  .site-counter-number,
+  .counter-number,
+  span.count,
+  h2 strong, h2 b {
+    color: $primary-color !important;
+  }
+
+  // Labels under the numbers
+  p, span, h6 {
+    color: $on-dark-text;
+  }
+}
+
+.site-footer-copyright a:hover { color: lighten($primary-color, 10%); }
+
+// =============================================
+// Readable green for text on light backgrounds
+// =============================================
+// $primary-color (#8EFE01) is our brand neon — gorgeous on dark surfaces,
+// unreadable on white (1.6:1 contrast). For body links and text accents
+// on light bg, we use a deeper green (#2F8800, 4.6:1, passes WCAG AA).
+// Brand green stays for: navbar CTA, hero accents, dark sections, buttons,
+// glow effects, anything on navy.
+
+$primary-color-text: #2F8800;
+
+// Light-bg link & accent overrides
+.site-portfolio-single-body a,
+.site-contact a[href^="mailto:"],
+.site-contact a[href*="codeovsky.com"],
+.site-intro-cta,
+.site-featured-card-cta,
+.site-project-cta,
+.site-about-page-body a {
+  color: $primary-color-text !important;
+
+  &:hover {
+    color: darken($primary-color-text, 8%) !important;
+  }
+}
+
+// Eyebrow labels (small uppercase text on light) — also need the readable green
+.site-intro-eyebrow,
+.site-about-page-eyebrow,
+.site-animations-card-client {
+  color: $primary-color-text;
+}
+
+// Contact icons on light bg
+.site-contact i,
+.site-contact-info-list i {
+  color: $primary-color-text !important;
+}
+
+// Section title accents (when on white/gray bg)
+.site-contact-title span,
+.site-portfolio-header-title span,
+.site-portfolio-single-header h1 span {
+  color: $primary-color-text;
+}
+
+// Keep these BRIGHT (they're on dark surfaces — neon works there):
+//   .site-navigation .nav-item:last-child .nav-link  (navbar CTA)
+//   .site-hero-content h1 span                        (hero accent)
+//   .site-cta *                                       (dark CTA section)
+//   .site-animations *                                (dark animations section)
+//   .site-counter *                                   (dark counter section)
+//   .site-footer *                                    (dark footer)
+//   .btn-primary                                      (button bg, not text)

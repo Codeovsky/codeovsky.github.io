@@ -79,7 +79,7 @@ summarylength = 25
   # Banner Section
   [params.banner]
     enable                = true
-    background_image      = "images/backgrounds/hero-background.jpg"
+    background_image      = "images/backgrounds/hero-background.png"
     heading               = "Design & Development Studio Fueling Great Ideas."
     tagline               = "WE WORK HARD, WE PLAY HARD"
     primary_button        = "See Our Works"
@@ -100,7 +100,7 @@ summarylength = 25
 
   [params.call_to_action]
     enable              = true
-    background_image    = "images/backgrounds/cta-background.jpg"
+    background_image    = ""
     title               = "LET’S WORK TOGETHER"
     primary_button      = "Submit Query"
     primary_button_url  = "contact"

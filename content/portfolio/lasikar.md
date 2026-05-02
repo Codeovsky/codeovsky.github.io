@@ -1,6 +1,6 @@
 ---
 title: "LASIKAR"
-date: 2026-05-01T12:00:00+05:00
+date: 2026-05-02T12:00:00+05:00
 type: portfolio
 image: "images/projects/lasikar-thumb.jpeg"
 category: ["SaaS", "AI", "Mobile App", "Cloud", "Animation"]
