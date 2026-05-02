@@ -1,0 +1,49 @@
+{{ define "main" }}
+<section class="site-portfolio-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-9">
+        <h1 class="site-portfolio-header-title">{{ .Title | safeHTML }}</h1>
+        {{ with .Params.description }}<p class="site-portfolio-header-lead">{{ . }}</p>{{ end }}
+      </div>
+      <div class="col-lg-3 text-right d-none d-lg-block">
+        <span class="site-portfolio-header-badge">
+          {{ len (where .Site.RegularPages "Section" "portfolio") }} projects
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="site-portfolio-grid">
+  <div class="container">
+    <div class="row">
+      {{ range .Pages }}
+      <div class="col-lg-6 col-md-6">
+        <a href="{{ .Permalink }}" class="site-featured-card">
+          <div class="site-featured-card-thumb">
+            {{ with .Params.image }}
+            <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy"
+                 onerror="this.style.display='none';this.parentElement.classList.add('no-image')">
+            {{ end }}
+            <div class="site-featured-card-thumb-fallback">
+              <span>{{ .Title }}</span>
+            </div>
+          </div>
+          <div class="site-featured-card-body">
+            <span class="site-featured-card-tags">
+              {{ range .Params.category }}<span>{{ . }}</span>{{ end }}
+            </span>
+            <h3>{{ .Title }}</h3>
+            {{ with .Params.summary }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <span class="site-featured-card-cta">View case study <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

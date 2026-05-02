@@ -26,7 +26,7 @@
   <link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" type="image/x-icon" />
   <link rel="icon" href="http://localhost:1313/images/favicon.ico" type="image/x-icon" />
 </head>
-<body><nav class="navbar navbar-expand-lg site-navigation">
+<body class="is-inner"><nav class="navbar navbar-expand-lg site-navigation">
   <div class="container">
     <a class="navbar-brand" href="http://localhost:1313/">
       <h5 style="color: #eaa4a4;">CodeOvsky</h5>
@@ -91,43 +91,93 @@
   </div>
 </nav>
 <main>
-<section class="site-portfolio-single">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 mx-auto">
-        <div class="site-portfolio-single-header">
-          <span class="category">
-            Web Security Performance 
+<article class="site-portfolio-single">
+
+  <header class="site-portfolio-single-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <span class="site-portfolio-single-tags">
+            <span>Web</span><span>Security</span><span>Performance</span>
           </span>
           <h1>MDG ACADEMY</h1>
-        </div>
-
-        <div class="site-portfolio-single-content">
-          <p>MdG Academy is the education arm of the MdG family. We built the website with a focus on speed and reliability — students and parents don&rsquo;t want to wait around for pages to load, especially on phones.</p>
-<p>We also locked the site down properly with secure headers, form protection, and regular checks. The kind of work that&rsquo;s invisible when it&rsquo;s working and very loud when it isn&rsquo;t.</p>
-<p><strong>What we did:</strong> Website build, security setup, page speed optimization.</p>
-
-
           
-          <a href="https://mdgacademy.com" target="_blank" rel="noopener" class="portfolio-project-link">
-            Visit the live project <i class="fa fa-external-link"></i>
+          <p class="site-portfolio-single-lead">Education site built for the audience that actually visits — students and parents on phones with patchy data.</p>
+          
+          
+          <a href="https://mdgacademy.com" target="_blank" rel="noopener" class="site-portfolio-single-visit">
+            Visit live project <i class="fa fa-external-link"></i>
           </a>
           
         </div>
+      </div>
+    </div>
+  </header>
 
+  
+  <div class="site-portfolio-single-hero">
+    <div class="container">
+      <img src="http://localhost:1313/images/projects/mdg-academy-thumb.jpg" alt="MDG ACADEMY" loading="eager"
+           onerror="this.style.display='none';this.parentElement.classList.add('no-image')">
+    </div>
+  </div>
+  
+
+  <div class="site-portfolio-single-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          <p>MdG Academy is the education arm of the MdG family. The audience is mostly students and parents researching options, often on their phones, often on data plans that don&rsquo;t love heavy sites.</p>
+<h3 id="what-we-did">What we did</h3>
+<p><strong>Built for mobile-first, not mobile-also.</strong> The site is fast, light, and readable on small screens before anything else. Desktop is a nice-to-have, not the design target.</p>
+<p><strong>Locked it down properly.</strong> Education sites attract a particular kind of bot traffic. We set up the right defenses — headers, captchas where needed, monitoring — without making the experience worse for real visitors.</p>
+<p><strong>Performance budget.</strong> Hard limits on page weight. New features can ship, but they can&rsquo;t bloat the load times.</p>
+<h3 id="the-takeaway">The takeaway</h3>
+<p>If your audience is mostly on phones with iffy connections, design for that audience first. Most &ldquo;responsive&rdquo; sites still aren&rsquo;t.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  
+  <div class="site-portfolio-single-gallery">
+    <div class="container">
+      <div class="row">
         
-        <div class="site-portfolio-single-images">
-          
-          <img src="http://localhost:1313/images/projects/mdg-academy-1.jpg" alt="MDG ACADEMY" loading="lazy">
-          
-          <img src="http://localhost:1313/images/projects/mdg-academy-2.jpg" alt="MDG ACADEMY" loading="lazy">
-          
+        <div class="col-lg-6 col-md-6">
+          <img src="http://localhost:1313/images/projects/mdg-academy-1.jpg" alt="MDG ACADEMY" loading="lazy"
+               onerror="this.parentElement.style.display='none'">
+        </div>
+        
+        <div class="col-lg-6 col-md-6">
+          <img src="http://localhost:1313/images/projects/mdg-academy-2.jpg" alt="MDG ACADEMY" loading="lazy"
+               onerror="this.parentElement.style.display='none'">
         </div>
         
       </div>
     </div>
   </div>
-</section>
+  
+
+  
+  
+  
+  <nav class="site-portfolio-single-next">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <a href="http://localhost:1313/portfolio" class="site-portfolio-single-back">
+            <i class="fa fa-arrow-left"></i> All projects
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</article>
 
         </main><footer class="site-footer">
   <div class="container">
@@ -138,7 +188,7 @@
           <h5 class="site-footer-widget-title">Contact Info</h5>
           <p class="site-footer-widget-description">
 	    
-              Pakistan
+              Global
 	      <br>
 	    
 	    

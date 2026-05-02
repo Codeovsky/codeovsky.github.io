@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Real businesses we have helped build and grow on CodeOvsky | Web, Cloud, Design &amp; Marketing for Growing Businesses</title>
+    <title>Real businesses we have helped &lt;span&gt;build&lt;/span&gt; and &lt;span&gt;grow&lt;/span&gt; on CodeOvsky | Web, Cloud, Design &amp; Marketing for Growing Businesses</title>
     <link>http://localhost:1313/portfolio/</link>
-    <description>Recent content in Real businesses we have helped build and grow on CodeOvsky | Web, Cloud, Design &amp; Marketing for Growing Businesses</description>
+    <description>Recent content in Real businesses we have helped &lt;span&gt;build&lt;/span&gt; and &lt;span&gt;grow&lt;/span&gt; on CodeOvsky | Web, Cloud, Design &amp; Marketing for Growing Businesses</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 May 2026 12:00:00 +0500</lastBuildDate>
@@ -13,42 +13,42 @@
       <link>http://localhost:1313/portfolio/ballondor-academy/</link>
       <pubDate>Fri, 01 May 2026 12:00:00 +0500</pubDate>
       <guid>http://localhost:1313/portfolio/ballondor-academy/</guid>
-      <description>BallonDor Academy is a SaaS platform built for sports academies — the kind of software that handles enrollment, schedules, fees, and everything else a coaching academy needs to actually run as a business.</description>
+      <description>SaaS for sports academies, with a payment gateway, an Instagram-driven marketing campaign, and a cloud bill that doesn&amp;rsquo;t kill them.</description>
     </item>
     <item>
       <title>GOLDEN SEAT</title>
       <link>http://localhost:1313/portfolio/golden-seat/</link>
       <pubDate>Fri, 01 May 2026 12:00:00 +0500</pubDate>
       <guid>http://localhost:1313/portfolio/golden-seat/</guid>
-      <description>Golden Seat is a platform for events and experiences — ticket sales, bookings, the whole flow from &amp;ldquo;I want to go to this thing&amp;rdquo; to &amp;ldquo;I have a confirmation in my inbox.</description>
+      <description>An events-and-experiences platform with built-in ticketing, payments, and infrastructure that doesn&amp;rsquo;t burn money during quiet weeks.</description>
     </item>
     <item>
       <title>LASIKAR</title>
       <link>http://localhost:1313/portfolio/lasikar/</link>
       <pubDate>Fri, 01 May 2026 12:00:00 +0500</pubDate>
       <guid>http://localhost:1313/portfolio/lasikar/</guid>
-      <description>Lasikar is a suite of business tools — Lasikar OS (a SaaS app businesses run their day-to-day on), Lasikar AI, and Lasikar Cloud. We&amp;rsquo;ve worked with the team across all three.</description>
+      <description>A SaaS suite, an AI layer, a mobile app, and the cloud setup running underneath. Plus the brand animations.</description>
     </item>
     <item>
       <title>MDG ACADEMY</title>
       <link>http://localhost:1313/portfolio/mdg-academy/</link>
       <pubDate>Fri, 01 May 2026 12:00:00 +0500</pubDate>
       <guid>http://localhost:1313/portfolio/mdg-academy/</guid>
-      <description>MdG Academy is the education arm of the MdG family. We built the website with a focus on speed and reliability — students and parents don&amp;rsquo;t want to wait around for pages to load, especially on phones.</description>
+      <description>Education site built for the audience that actually visits — students and parents on phones with patchy data.</description>
     </item>
     <item>
       <title>MDG COLD</title>
       <link>http://localhost:1313/portfolio/mdg-cold/</link>
       <pubDate>Fri, 01 May 2026 12:00:00 +0500</pubDate>
       <guid>http://localhost:1313/portfolio/mdg-cold/</guid>
-      <description>MdG Cold needed a website that worked — properly. We built it from scratch, then locked it down with proper security, and tuned it so pages load fast on slow connections too.</description>
+      <description>A clean, fast website for a cold-storage business — locked down properly and tuned to load on slow connections.</description>
     </item>
     <item>
       <title>MDG OMNIA</title>
       <link>http://localhost:1313/portfolio/mdg-omnia/</link>
       <pubDate>Fri, 01 May 2026 12:00:00 +0500</pubDate>
       <guid>http://localhost:1313/portfolio/mdg-omnia/</guid>
-      <description>MdG Omnia is the third site in the MdG family we&amp;rsquo;ve worked on. Same playbook, tuned for what Omnia specifically needed — a clean website, fast loads, and a proper security setup so the team doesn&amp;rsquo;t have to think about it.</description>
+      <description>Third site in the MdG family — same playbook, tuned for what Omnia specifically needed.</description>
     </item>
   </channel>
 </rss>

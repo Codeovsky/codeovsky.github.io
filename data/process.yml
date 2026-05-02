@@ -1,0 +1,19 @@
+title: "HOW WE WORK"
+subtitle: "Honest conversations, careful builds, and the long view. Here's the rough shape of it."
+
+steps:
+  - number: "01"
+    title: "Listen"
+    description: "We start with conversations, not slide decks. What's actually going on, where the friction is, where the money comes from. Plain English."
+
+  - number: "02"
+    title: "Map"
+    description: "We figure out what would actually move the needle — the small handful of things that matter, not the long list of things that don't."
+
+  - number: "03"
+    title: "Build"
+    description: "Then we ship. Carefully, in pieces, with you in the loop. No surprises. The team you talk to is the team doing the work."
+
+  - number: "04"
+    title: "Stay"
+    description: "We don't disappear after delivery. Most of our clients work with us for years, because the build is just the start."

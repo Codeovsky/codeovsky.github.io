@@ -3,9 +3,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-5">
-        <h1 class="site-contact-title">
-          {{ .Params.heading | safeHTML }}
-        </h1>
+        <span class="site-about-page-eyebrow">GET IN TOUCH</span>
+        <h1 class="site-contact-title">{{ .Params.heading | safeHTML }}</h1>
         <ul class="site-contact-info-list">
           <li>
             <i class="fa fa-envelope"></i>
@@ -43,7 +42,6 @@
                 <textarea class="form-control" id="aboutProject" name="message" rows="6" placeholder="Tell us a bit about your project" required></textarea>
               </div>
 
-              <!-- Math captcha -->
               <div class="col-12">
                 <div class="captcha-row">
                   <label id="captchaQuestion" for="captcha">Quick check: 0 + 0 =</label>
@@ -52,7 +50,6 @@
                 </div>
               </div>
 
-              <!-- Honeypot -->
               <div style="position:absolute;left:-9999px;" aria-hidden="true">
                 <label for="website">Website (leave blank)</label>
                 <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">

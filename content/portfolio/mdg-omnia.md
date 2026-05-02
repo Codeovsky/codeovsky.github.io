@@ -6,10 +6,19 @@ image: "images/projects/mdg-omnia-thumb.jpg"
 category: ["Web", "Security", "Performance"]
 project_url: "https://mdgomnia.com"
 project_images: ["images/projects/mdg-omnia-1.jpg", "images/projects/mdg-omnia-2.jpg"]
+summary: "Third site in the MdG family — same playbook, tuned for what Omnia specifically needed."
 ---
 
-MdG Omnia is the third site in the MdG family we've worked on. Same playbook, tuned for what Omnia specifically needed — a clean website, fast loads, and a proper security setup so the team doesn't have to think about it.
+MdG Omnia is the third of three sites we've built for the MdG family of businesses. Same engineering approach, but tuned for what Omnia specifically does and the audience it speaks to.
 
-We also helped tie the three MdG sites together visually and technically, so the brand feels consistent across all of them without each one being a copy of the others.
+### What we did
 
-**What we did:** Website build, security, performance, brand consistency across the MdG family.
+**Brand-consistent, business-distinct.** All three MdG sites feel like they belong to the same family without being copy-pastes of each other. We worked with the team to figure out where consistency mattered and where each business needed its own voice.
+
+**Same security and performance baseline.** Same hardening, same speed budget, same uptime monitoring. If you're going to run three sites, you might as well run them on the same playbook.
+
+**Easy team handoff.** The team can update content without calling us every time. We're available when they want us, not because they have to.
+
+### The takeaway
+
+Building three sites with one team means each site benefits from what we learned on the others. Compounding quality, lower cost per site, faster delivery. That's the case for picking a partner over a per-project agency.

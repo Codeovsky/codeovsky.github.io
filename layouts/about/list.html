@@ -1,0 +1,62 @@
+{{ define "main" }}
+<article class="site-about-page">
+
+  <header class="site-about-page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          <span class="site-about-page-eyebrow">ABOUT CODEOVSKY</span>
+          <h1>{{ .Params.heading | safeHTML }}</h1>
+          {{ with .Params.description }}
+          <p class="site-about-page-lead">{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="site-about-page-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ with .Params.expertise_sectors }}
+  <section class="site-about-page-expertise">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          {{ with $.Params.expertise_title }}<h3>{{ . }}</h3>{{ end }}
+          <ul class="site-about-page-expertise-list">
+            {{ range . }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <section class="site-about-page-cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto text-center">
+          <h2>Working on something?</h2>
+          <p>Tell us about it. We'll tell you honestly whether we can help.</p>
+          <a href="{{ "contact" | absURL }}" class="btn btn-primary">
+            <span class="btn-area">
+              <span data-text="Get in touch">Get in touch</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</article>
+{{ end }}

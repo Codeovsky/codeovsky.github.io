@@ -72,7 +72,7 @@ summarylength = 25
   [params.footer]
     [params.footer.contactInfo]
       title   = "Contact Info"
-      address = "Pakistan"
+      address = "Global"
       phone   = ""
       email   = "info@codeovsky.com"
 

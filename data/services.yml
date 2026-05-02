@@ -1,10 +1,10 @@
-title: "What we help with"
-subtitle: "We're not picky about what kind of problem you bring us. If it's about growing a business, we're probably interested."
+title: "WHAT WE WORK ON"
+subtitle: "We're not picky about the medium. If it's about helping a business grow, we're probably interested."
 
 services:
   - icon: "fa-code"
     title: "Web Applications"
-    description: "Custom web apps that fit how your business actually works — not how some template thinks it should."
+    description: "Custom apps that fit how your business actually works — not how some template thinks it should."
 
   - icon: "fa-database"
     title: "Databases & Infrastructure"
@@ -12,32 +12,32 @@ services:
 
   - icon: "fa-shield"
     title: "Cyber Security"
-    description: "We secure your apps, your cloud setup, and your data. The goal is for you to never have to think about it."
+    description: "We secure your apps, your cloud, and your data so you can stop thinking about it."
 
   - icon: "fa-cloud"
     title: "Cloud Engineering"
-    description: "AWS, GCP, Azure, Cloudflare — we set things up properly so they scale when you need them to."
+    description: "AWS, GCP, Azure, Cloudflare. Set up properly, scaled when you need them, idle when you don't."
 
   - icon: "fa-money"
     title: "Cloud Cost Optimization"
-    description: "Cloud bills get out of hand fast. We've cut bills significantly for clients while keeping the same performance. Often more."
+    description: "Most cloud bills have 30-50% slack in them. We find it without dropping performance."
 
   - icon: "fa-paint-brush"
-    title: "Design & Branding"
-    description: "Brand identity, web design, mobile app design — visual work that actually fits the business it's for."
+    title: "Brand & Identity Design"
+    description: "Logos, design systems, websites, app interfaces — visual work that fits the business behind it."
 
   - icon: "fa-film"
     title: "Animation & Motion"
-    description: "Scripted animation pieces with character — for product explainers, ad campaigns, and anything else that needs to move."
+    description: "Scripted animation pieces with character. For product explainers, ad campaigns, brand films."
 
   - icon: "fa-bullhorn"
     title: "Marketing Campaigns"
-    description: "We run real campaigns that grow real audiences. Social, content, ads, the whole stack — tied to actual business outcomes."
+    description: "Real campaigns that grow real audiences. Social, content, ads — tied to actual business outcomes."
 
   - icon: "fa-pencil"
     title: "Content Production"
-    description: "Scripts, posts, videos, articles. Content that sounds like a human wrote it because one did."
+    description: "Scripts, posts, videos, articles. Written by people who can read your room."
 
   - icon: "fa-comments"
     title: "Customer Support"
-    description: "We help businesses run their customer support so the people buying from you actually feel taken care of."
+    description: "We help businesses run support so the people buying from you actually feel taken care of."
