@@ -1142,18 +1142,20 @@ body:has(.site-hero) main { padding-top: 0; }
 // ---------- Hero: dark overlay so headline reads on any bg ----------
 .site-hero {
   position: relative;
+  overflow: hidden;        // kills horizontal scroll from overlay/bg
 
   &::before {
     content: "";
     position: absolute;
-    inset: 0;
+    top: 0; left: 0; right: 0; bottom: 0;   // safer than `inset` for older Bootstrap layouts
     background: linear-gradient(
       135deg,
-      rgba(29, 35, 49, 0.85) 0%,
-      rgba(29, 35, 49, 0.65) 60%,
-      rgba(29, 35, 49, 0.85) 100%
+      rgba(29, 35, 49, 0.88) 0%,
+      rgba(29, 35, 49, 0.70) 60%,
+      rgba(29, 35, 49, 0.92) 100%
     );
     z-index: 1;
+    pointer-events: none;
   }
 
   > .container,
@@ -1165,15 +1167,24 @@ body:has(.site-hero) main { padding-top: 0; }
   &-content {
     h1 {
       color: $white;
-
-      // The theme uses <span> inside h1 for the tagline accent — paint it green
       span { color: $primary-color; }
+    }
+
+    h6, .tagline, p:first-child {
+      color: $primary-color !important;
+      letter-spacing: 4px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 18px;
     }
   }
 
-  // Keep the scroll arrow visible on dark hero
   &-scroll img { filter: brightness(0) invert(1); }
 }
+
+// Belt-and-suspenders: prevent any descendant from causing horizontal scroll
+html, body { overflow-x: hidden; }
 
 // ---------- Footer: dark navy with white logo ----------
 .site-footer {
@@ -1346,3 +1357,108 @@ body:has(.site-hero) main { padding-top: 0; }
 
 // ---------- Video modal close button hover tint ----------
 .site-video-modal-close:hover { background: rgba(142, 254, 1, 0.25); }
+
+// ---------- Contact page accents ----------
+.site-contact {
+  // Icons (theme uses Font Awesome <i> tags inside contact items)
+  i, .fa, .fas, .far, .fab,
+  [class^="ti-"], [class*=" ti-"] {
+    color: $primary-color !important;
+  }
+
+  // Email / link in body copy
+  a {
+    color: $primary-color;
+    &:hover { color: darken($primary-color, 10%); text-decoration: underline; }
+  }
+
+  // "Prefer email? info@codeovsky.com" inline link
+  p a, .site-contact-info-content a {
+    color: $primary-color !important;
+  }
+
+  // Title accent span (already covered, but reinforce)
+  &-title span { color: $primary-color; }
+}
+
+// Custom contact info list (the one in additions)
+.site-contact-info-list i { color: $primary-color !important; }
+.site-contact-info-list li a:hover { color: $primary-color; }
+
+// ---------- Counter section: dark navy with green accents ----------
+.site-counter {
+  background: $surface-dark !important;
+  color: $white;
+
+  h2, h3, h4 { color: $white; }
+
+  // The big numbers
+  .site-counter-number,
+  .counter-number,
+  span.count,
+  h2 strong, h2 b {
+    color: $primary-color !important;
+  }
+
+  // Labels under the numbers
+  p, span, h6 {
+    color: $on-dark-text;
+  }
+}
+
+.site-footer-copyright a:hover { color: lighten($primary-color, 10%); }
+
+// =============================================
+// Readable green for text on light backgrounds
+// =============================================
+// $primary-color (#8EFE01) is our brand neon — gorgeous on dark surfaces,
+// unreadable on white (1.6:1 contrast). For body links and text accents
+// on light bg, we use a deeper green (#2F8800, 4.6:1, passes WCAG AA).
+// Brand green stays for: navbar CTA, hero accents, dark sections, buttons,
+// glow effects, anything on navy.
+
+$primary-color-text: #2F8800;
+
+// Light-bg link & accent overrides
+.site-portfolio-single-body a,
+.site-contact a[href^="mailto:"],
+.site-contact a[href*="codeovsky.com"],
+.site-intro-cta,
+.site-featured-card-cta,
+.site-project-cta,
+.site-about-page-body a {
+  color: $primary-color-text !important;
+
+  &:hover {
+    color: darken($primary-color-text, 8%) !important;
+  }
+}
+
+// Eyebrow labels (small uppercase text on light) — also need the readable green
+.site-intro-eyebrow,
+.site-about-page-eyebrow,
+.site-animations-card-client {
+  color: $primary-color-text;
+}
+
+// Contact icons on light bg
+.site-contact i,
+.site-contact-info-list i {
+  color: $primary-color-text !important;
+}
+
+// Section title accents (when on white/gray bg)
+.site-contact-title span,
+.site-portfolio-header-title span,
+.site-portfolio-single-header h1 span {
+  color: $primary-color-text;
+}
+
+// Keep these BRIGHT (they're on dark surfaces — neon works there):
+//   .site-navigation .nav-item:last-child .nav-link  (navbar CTA)
+//   .site-hero-content h1 span                        (hero accent)
+//   .site-cta *                                       (dark CTA section)
+//   .site-animations *                                (dark animations section)
+//   .site-counter *                                   (dark counter section)
+//   .site-footer *                                    (dark footer)
+//   .btn-primary                                      (button bg, not text)
