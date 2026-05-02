@@ -2,10 +2,10 @@
 title: "MDG ACADEMY"
 date: 2026-05-01T12:00:00+05:00
 type: portfolio
-image: "images/projects/mdg-academy-thumb.jpg"
+image: ""
 category: ["Web", "Security", "Performance"]
 project_url: "https://mdgacademy.com"
-project_images: ["images/projects/mdg-academy-1.jpg", "images/projects/mdg-academy-2.jpg"]
+project_images: [""]
 summary: "Education site built for the audience that actually visits — students and parents on phones with patchy data."
 ---
 

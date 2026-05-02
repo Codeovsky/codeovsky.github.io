@@ -2,10 +2,10 @@
 title: "BALLONDOR ACADEMY"
 date: 2026-05-01T12:00:00+05:00
 type: portfolio
-image: "images/projects/ballondor-thumb.jpg"
+image: "images/projects/ballondor-thumb.png"
 category: ["SaaS", "Payments", "Marketing"]
 project_url: "https://ballondoracademy.com"
-project_images: ["images/projects/ballondor-1.jpg", "images/projects/ballondor-2.jpg"]
+project_images: [""]
 summary: "SaaS for sports academies, with a payment gateway, an Instagram-driven marketing campaign, and a cloud bill that doesn't kill them."
 instagram: "https://www.instagram.com/ballondorsa/"
 ---
