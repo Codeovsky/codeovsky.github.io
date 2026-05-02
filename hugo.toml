@@ -41,7 +41,7 @@ summarylength = 25
 
   [params.banner]
     enable                = true
-    background_image      = "images/backgrounds/hero-background.jpg"
+    background_image      = "images/backgrounds/hero-background.png"
     heading               = "We help businesses grow. Not gigs — partnerships."
     tagline               = "WEB · CLOUD · DESIGN · GROWTH"
     primary_button        = "See Our Work"
@@ -62,7 +62,7 @@ summarylength = 25
 
   [params.call_to_action]
     enable              = true
-    background_image    = "images/backgrounds/cta-background.jpg"
+    background_image    = ""
     title               = "LET'S BUILD SOMETHING GOOD"
     primary_button      = "Start a Conversation"
     primary_button_url  = "contact"

@@ -1,7 +1,7 @@
 .btn{
   font-family: $secondary-font;
   border: none;
-  color: $white !important;
+  color: $text-color-dark !important;
   padding: 20px 45px;
   border-radius: 0;
   &:focus{
@@ -62,16 +62,18 @@
 
 .btn-primary{
   background: $primary-color;
-  color: $white;
+  color: $text-color-dark !important;
   &:hover{
-    background: darken($color: $primary-color, $amount: 10);
+    background: darken($color: $primary-color, $amount: 8);
+    color: $text-color-dark !important;
   }
 }
 
 .btn-secondary{
   background: $secondary-color;
-  color: $white;
+  color: $white !important;
   &:hover{
-    background: darken($color: $secondary-color, $amount: 10);
+    background: darken($color: $secondary-color, $amount: 8);
+    color: $white !important;
   }
 }

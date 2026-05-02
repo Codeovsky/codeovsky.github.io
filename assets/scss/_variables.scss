@@ -1,17 +1,38 @@
-//site color variables
-$body-color: #fff;
-$primary-color: #EAA4A4;
-$secondary-color: #ADD6D2;
-$text-color: #9D9EA5;
-$text-color-dark: #00113E;
-$site-ease: cubic-bezier(0.36, 0.03, 0, 0.91);
-$gray: #F7F9FF;
-$dark-gray: #646569;
+// =============================================
+// CodeOvsky brand palette
+// =============================================
+// Brand:
+//   Green       #8EFE01   primary accent
+//   Deep Navy   #1D2331   dark surfaces, headings
+//   Violet      #8B53FE   secondary accent
+//   White       #FFFFFF
+// =============================================
 
-// solid colors
+// Brand colors (raw)
+$brand-green:  #8EFE01;
+$brand-navy:   #1D2331;
+$brand-violet: #8B53FE;
+
+// Site color variables (semantic — used everywhere via component files)
+$body-color:       #fff;
+$primary-color:    $brand-green;     // was #EAA4A4
+$secondary-color:  $brand-violet;    // was #ADD6D2
+$text-color:       #6B7280;          // neutral body text on light bg
+$text-color-dark:  $brand-navy;      // headings, dark text
+$site-ease:        cubic-bezier(0.36, 0.03, 0, 0.91);
+$gray:             #F5F7FA;          // light section bg
+$dark-gray:        #4A5160;
+
+// Solid
 $white: #fff;
 $black: #000;
 
-// Font Variables
-$primary-font: 'Josefin Sans', sans-serif;
+// Dark surface helpers (used by codeovsky-additions overrides)
+$surface-dark:        $brand-navy;
+$surface-dark-soft:   #262C3D;       // slightly lifted navy for cards on dark
+$on-dark-text:        rgba(255, 255, 255, 0.78);
+$on-dark-muted:       rgba(255, 255, 255, 0.55);
+
+// Fonts (unchanged)
+$primary-font:   'Josefin Sans', sans-serif;
 $secondary-font: 'Montserrat', sans-serif;
