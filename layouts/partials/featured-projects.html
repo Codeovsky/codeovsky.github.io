@@ -1,0 +1,49 @@
+{{ $portfolio := where .Site.RegularPages "Section" "portfolio" }}
+{{ $featured := $portfolio }}
+
+<section class="site-featured" id="featured">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2>{{ with .Site.Params.portfolio.title }}{{ . }}{{ else }}REAL CLIENTS, REAL WORK{{ end }}</h2>
+          <p>{{ with .Site.Params.portfolio.subtitle }}{{ . }}{{ else }}A few of the businesses we've helped build, run, and grow.{{ end }}</p>
+        </div>
+      </div>
+
+      {{ range $featured }}
+      <div class="col-lg-6 col-md-6">
+        <a href="{{ .Permalink }}" class="site-featured-card">
+          <div class="site-featured-card-thumb">
+            {{ with .Params.image }}
+            <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy"
+                 onerror="this.style.display='none';this.parentElement.classList.add('no-image')">
+            {{ end }}
+            <div class="site-featured-card-thumb-fallback">
+              <span>{{ .Title }}</span>
+            </div>
+          </div>
+          <div class="site-featured-card-body">
+            <span class="site-featured-card-tags">
+              {{ range .Params.category }}<span>{{ . }}</span>{{ end }}
+            </span>
+            <h3>{{ .Title }}</h3>
+            {{ with .Params.summary }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <span class="site-featured-card-cta">View case study <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+      {{ end }}
+
+      <div class="col-12 text-center">
+        <a href="{{ "portfolio" | absURL }}" class="btn btn-primary site-featured-more">
+          <span class="btn-area">
+            <span data-text="See all projects">See all projects</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

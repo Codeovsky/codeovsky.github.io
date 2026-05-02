@@ -1,0 +1,51 @@
+{{ with .Site.Data.animations }}
+<section class="site-animations" id="animations">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2>{{ .title }}</h2>
+          <p>{{ .subtitle }}</p>
+        </div>
+      </div>
+      {{ range $idx, $a := .reel }}
+      <div class="col-lg-4 col-md-6">
+        <button type="button" class="site-animations-card"
+                data-video="{{ .video | absURL }}"
+                data-title="{{ .title }}"
+                data-client="{{ .client }}">
+          <div class="site-animations-card-thumb">
+            <img src="{{ .image | absURL }}" alt="{{ .title }}" loading="lazy">
+            <span class="site-animations-card-play">
+              <i class="fa fa-play"></i>
+            </span>
+          </div>
+          <div class="site-animations-card-meta">
+            <span class="site-animations-card-client">{{ .client }}</span>
+            <h5>{{ .title }}</h5>
+            <p>{{ .description }}</p>
+          </div>
+        </button>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox modal -->
+<div class="site-video-modal" id="videoModal" aria-hidden="true">
+  <div class="site-video-modal-overlay" data-close-modal></div>
+  <div class="site-video-modal-content" role="dialog" aria-modal="true">
+    <button type="button" class="site-video-modal-close" aria-label="Close" data-close-modal>
+      <i class="fa fa-times"></i>
+    </button>
+    <div class="site-video-modal-frame" id="videoModalFrame"></div>
+    <div class="site-video-modal-caption">
+      <span id="videoModalClient"></span>
+      <h4 id="videoModalTitle"></h4>
+    </div>
+  </div>
+</div>
+
+<script src="{{ "js/animations.js" | absURL }}" defer></script>
+{{ end }}

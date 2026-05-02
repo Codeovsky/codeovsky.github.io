@@ -1,0 +1,74 @@
+{{ define "main" }}
+<section class="site-contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <span class="site-about-page-eyebrow">GET IN TOUCH</span>
+        <h1 class="site-contact-title">{{ .Params.heading | safeHTML }}</h1>
+        <ul class="site-contact-info-list">
+          <li>
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
+          </li>
+          <li>
+            <i class="fa fa-map-marker"></i>
+            <span>{{ .Params.location }}</span>
+          </li>
+        </ul>
+        <div class="site-contact-info-content">
+          {{ .Content }}
+        </div>
+      </div>
+      <div class="col-lg-6 ml-auto">
+        <div class="site-contact-form">
+          <h4>{{ .Params.form_heading }}</h4>
+
+          <!-- Replace YOUR_FORM_ID below with the form ID from formspree.io -->
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <div class="row">
+              <div class="col-lg-6">
+                <input type="text" class="form-control" name="first-name" id="first-name" placeholder="First name" required>
+              </div>
+              <div class="col-lg-6">
+                <input type="text" class="form-control" name="last-name" id="last-name" placeholder="Last name" required>
+              </div>
+              <div class="col-lg-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+              </div>
+              <div class="col-lg-6">
+                <input type="text" class="form-control" name="_subject" id="subject" placeholder="What's this about?" required>
+              </div>
+              <div class="col-12">
+                <textarea class="form-control" id="aboutProject" name="message" rows="6" placeholder="Tell us a bit about your project" required></textarea>
+              </div>
+
+              <div class="col-12">
+                <div class="captcha-row">
+                  <label id="captchaQuestion" for="captcha">Quick check: 0 + 0 =</label>
+                  <input type="number" id="captcha" name="captcha_answer" class="form-control" required>
+                  <input type="hidden" id="captchaExpected" name="captcha_expected">
+                </div>
+              </div>
+
+              <div style="position:absolute;left:-9999px;" aria-hidden="true">
+                <label for="website">Website (leave blank)</label>
+                <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary" id="contact-form-button">
+                  <span class="btn-area">
+                    <span data-text="Send message">Send message</span>
+                  </span>
+                </button>
+              </div>
+              <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="{{ "js/contact.js" | absURL }}"></script>
+{{ end }}

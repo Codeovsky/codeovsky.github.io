@@ -1,0 +1,23 @@
+title: "ANIMATIONS WE'VE MADE"
+subtitle: "Scripted animation pieces — character, story, and a clear point. Click any to play."
+
+reel:
+  - title: "Lasikar Brand Film"
+    client: "Lasikar"
+    description: "Short character-driven piece explaining what Lasikar does without sounding like a generic SaaS explainer."
+    image: "images/projects/animation-lasikar-1.jpg"
+    # Use a YouTube embed URL OR a local mp4 path
+    video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    # video: "videos/lasikar-brand.mp4"
+
+  - title: "Lasikar AI Reveal"
+    client: "Lasikar"
+    description: "Product reveal animation for the AI launch. Tight, punchy, on-brand."
+    image: "images/projects/animation-lasikar-2.jpg"
+    video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+
+  - title: "BallonDor Campaign"
+    client: "BallonDor Academy"
+    description: "Series of short social-first animations promoting trial classes. Built for Reels and Shorts."
+    image: "images/projects/animation-ballondor-1.jpg"
+    video: "https://www.youtube.com/embed/dQw4w9WgXcQ"

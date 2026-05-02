@@ -1,0 +1,122 @@
+{{ define "main" }}
+<article class="site-portfolio-single">
+
+  <header class="site-portfolio-single-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <span class="site-portfolio-single-tags">
+            {{ range .Params.category }}<span>{{ . }}</span>{{ end }}
+          </span>
+          <h1>{{ .Title }}</h1>
+          {{ with .Params.summary }}
+          <p class="site-portfolio-single-lead">{{ . }}</p>
+          {{ end }}
+          {{ with .Params.project_url }}
+          <a href="{{ . }}" target="_blank" rel="noopener" class="site-portfolio-single-visit">
+            Visit live project <i class="fa fa-external-link"></i>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{ with .Params.image }}
+  <div class="site-portfolio-single-hero">
+    <div class="container">
+      <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="eager"
+           onerror="this.style.display='none';this.parentElement.classList.add('no-image')">
+    </div>
+  </div>
+  {{ end }}
+
+  <div class="site-portfolio-single-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ with .Params.animations }}
+  <section class="site-portfolio-single-animations">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          <h2>Animations we made for this brand</h2>
+        </div>
+      </div>
+      <div class="row">
+        {{ range . }}
+        <div class="col-lg-6 col-md-6">
+          <button type="button" class="site-animations-card"
+                  data-video="{{ .video | absURL }}"
+                  data-title="{{ .title }}"
+                  data-client="">
+            <div class="site-animations-card-thumb">
+              <img src="{{ .image | absURL }}" alt="{{ .title }}" loading="lazy">
+              <span class="site-animations-card-play"><i class="fa fa-play"></i></span>
+            </div>
+            <div class="site-animations-card-meta">
+              <h5>{{ .title }}</h5>
+              <p>{{ .description }}</p>
+            </div>
+          </button>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox modal (only if animations exist) -->
+  <div class="site-video-modal" id="videoModal" aria-hidden="true">
+    <div class="site-video-modal-overlay" data-close-modal></div>
+    <div class="site-video-modal-content" role="dialog" aria-modal="true">
+      <button type="button" class="site-video-modal-close" aria-label="Close" data-close-modal>
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="site-video-modal-frame" id="videoModalFrame"></div>
+      <div class="site-video-modal-caption">
+        <span id="videoModalClient"></span>
+        <h4 id="videoModalTitle"></h4>
+      </div>
+    </div>
+  </div>
+  <script src="{{ "js/animations.js" | absURL }}" defer></script>
+  {{ end }}
+
+  {{ with .Params.project_images }}
+  <div class="site-portfolio-single-gallery">
+    <div class="container">
+      <div class="row">
+        {{ range . }}
+        <div class="col-lg-6 col-md-6">
+          <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy"
+               onerror="this.parentElement.style.display='none'">
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- Next project nav -->
+  {{ $portfolio := where .Site.RegularPages "Section" "portfolio" }}
+  {{ $current := . }}
+  <nav class="site-portfolio-single-next">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <a href="{{ "portfolio" | absURL }}" class="site-portfolio-single-back">
+            <i class="fa fa-arrow-left"></i> All projects
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</article>
+{{ end }}

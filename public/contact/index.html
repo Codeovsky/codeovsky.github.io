@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   
-  <meta name="author" content="StaticMania">
+  <meta name="author" content="CodeOvsky">
   
   <meta name="generator" content="Hugo 0.128.0">
 
@@ -26,7 +26,7 @@
   <link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" type="image/x-icon" />
   <link rel="icon" href="http://localhost:1313/images/favicon.ico" type="image/x-icon" />
 </head>
-<body><nav class="navbar navbar-expand-lg site-navigation">
+<body class="is-inner"><nav class="navbar navbar-expand-lg site-navigation">
   <div class="container">
     <a class="navbar-brand" href="http://localhost:1313/">
       <h5 style="color: #eaa4a4;">CodeOvsky</h5>
@@ -95,63 +95,76 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-5">
-        <h1 class="site-contact-title">
-          Don’t be shy. Say <span>Hello.</span>
-        </h1>
+        <span class="site-about-page-eyebrow">GET IN TOUCH</span>
+        <h1 class="site-contact-title">Got something to build? <span>Say hi.</span></h1>
+        <ul class="site-contact-info-list">
+          <li>
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:info@codeovsky.com">info@codeovsky.com</a>
+          </li>
+          <li>
+            <i class="fa fa-map-marker"></i>
+            <span>Global team</span>
+          </li>
+        </ul>
+        <div class="site-contact-info-content">
+          <p>Drop us a note. Tell us what you&rsquo;re working on, what&rsquo;s stuck, or what you&rsquo;re trying to grow. We&rsquo;ll get back to you within a day or two — usually faster.</p>
+<p>Prefer email? <a href="mailto:info@codeovsky.com">info@codeovsky.com</a></p>
+
+        </div>
       </div>
       <div class="col-lg-6 ml-auto">
         <div class="site-contact-form">
           <h4>TELL US ABOUT YOUR PROJECT</h4>
-          <form id="contact-form" action="https://fabform.io/f/k2UJEfp" method="post">
+
+          
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
             <div class="row">
               <div class="col-lg-6">
-                <input type="text" class="form-control" name="first-name" id="first-name" placeholder="First Name" required>
+                <input type="text" class="form-control" name="first-name" id="first-name" placeholder="First name" required>
               </div>
               <div class="col-lg-6">
-                <input type="text" class="form-control" name="last-name" id="last-name" placeholder="Last Name" required>
+                <input type="text" class="form-control" name="last-name" id="last-name" placeholder="Last name" required>
               </div>
               <div class="col-lg-6">
                 <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
               </div>
               <div class="col-lg-6">
-                <div class="select-wrapper">
-                  <select class="form-control" id="projectType" name="project-type" required>
-                    <option value="" selected disabled hidden>Project Type</option>
-                    
-                    <option value="All">All</option>
-                    
-                    <option value="Branding">Branding</option>
-                    
-                    <option value="Graphic Design &amp; Animation">Graphic Design &amp; Animation</option>
-                    
-                    <option value="Web Design &amp; Developement">Web Design &amp; Developement</option>
-                    
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    
-                  </select>
+                <input type="text" class="form-control" name="_subject" id="subject" placeholder="What's this about?" required>
+              </div>
+              <div class="col-12">
+                <textarea class="form-control" id="aboutProject" name="message" rows="6" placeholder="Tell us a bit about your project" required></textarea>
+              </div>
+
+              <div class="col-12">
+                <div class="captcha-row">
+                  <label id="captchaQuestion" for="captcha">Quick check: 0 + 0 =</label>
+                  <input type="number" id="captcha" name="captcha_answer" class="form-control" required>
+                  <input type="hidden" id="captchaExpected" name="captcha_expected">
                 </div>
               </div>
-              <div class="col-12">
-                <textarea class="form-control" id="aboutProject" name="about-project" rows="6" placeholder="About the Project"></textarea>
+
+              <div style="position:absolute;left:-9999px;" aria-hidden="true">
+                <label for="website">Website (leave blank)</label>
+                <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
               </div>
+
               <div class="col-12">
-                <button formtarget="_blank" type="submit" class="btn btn-primary" id="contact-form-button">
+                <button type="submit" class="btn btn-primary" id="contact-form-button">
                   <span class="btn-area">
-                    <span data-text="Send Message">
-                      Send Message
-                    </span>
+                    <span data-text="Send message">Send message</span>
                   </span>
                 </button>
               </div>
-              <p id="contact-form-status"></p>
+              <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
             </div>
           </form>
-          
         </div>
       </div>
     </div>
   </div>
 </section>
+<script src="http://localhost:1313/js/contact.js"></script>
 
         </main><footer class="site-footer">
   <div class="container">
@@ -162,13 +175,12 @@
           <h5 class="site-footer-widget-title">Contact Info</h5>
           <p class="site-footer-widget-description">
 	    
-              Islamabad, Lahore & Peshawar
+              Global
 	      <br>
 	    
 	    
-              <a href="tel:03355326446">03355326446</a>
-              <br>
 	    
+              <a href="mailto:info@codeovsky.com">info@codeovsky.com</a>
 	    
           </p>
         </div>
@@ -180,9 +192,9 @@
           <h5 class="site-footer-widget-title">Sitemap</h5>
           <ul class="site-footer-widget-links">
             
-            <li><a href="http://localhost:1313/about">About Company</a></li>
+            <li><a href="http://localhost:1313/about">About</a></li>
             
-            <li><a href="http://localhost:1313/portfolio">Projects</a></li>
+            <li><a href="http://localhost:1313/portfolio">Portfolio</a></li>
             
             <li><a href="http://localhost:1313/contact">Contact</a></li>
             
@@ -193,14 +205,12 @@
       
       <div class="col-lg-2 col-md-6">
         <div class="site-footer-widget">
-          <h5 class="site-footer-widget-title">Social Media</h5>
+          <h5 class="site-footer-widget-title">Reach Us</h5>
           <ul class="site-footer-widget-links">
             
-              <li><a href="#">Behance</a></li>
+              <li><a href="mailto:info@codeovsky.com">Email</a></li>
             
-              <li><a href="#">Dribbble</a></li>
-            
-              <li><a href="#">Instagram</a></li>
+              <li><a href="https://www.instagram.com/ballondorsa/">Instagram</a></li>
             
           </ul>
         </div>
@@ -209,9 +219,9 @@
       
       <div class="col-lg-3 col-md-6">
         <div class="site-footer-widget">
-          <h5 class="site-footer-widget-title">We help brands:</h5>
+          <h5 class="site-footer-widget-title">We help businesses:</h5>
           <p class="site-footer-widget-description">
-            develop design solutions<br>produce valuable cultural content<br>create fresh brand experience
+            build the right things<br>cut the wrong costs<br>grow with people who care
           </p>
         </div>
       </div>
@@ -220,7 +230,7 @@
         <a href="#top" class="site-footer-widget-top">
           <img src="http://localhost:1313/images/to-top.svg" alt="back-to-top">
           <p>
-	    I want to <br> visit again
+	    Take me <br> back up
           </p>
         </a>
       </div>

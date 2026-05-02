@@ -1,0 +1,43 @@
+title: "WHAT WE WORK ON"
+subtitle: "We're not picky about the medium. If it's about helping a business grow, we're probably interested."
+
+services:
+  - icon: "fa-code"
+    title: "Web Applications"
+    description: "Custom apps that fit how your business actually works — not how some template thinks it should."
+
+  - icon: "fa-database"
+    title: "Databases & Infrastructure"
+    description: "Clean data models, fast queries, and the boring-but-critical plumbing that keeps everything running."
+
+  - icon: "fa-shield"
+    title: "Cyber Security"
+    description: "We secure your apps, your cloud, and your data so you can stop thinking about it."
+
+  - icon: "fa-cloud"
+    title: "Cloud Engineering"
+    description: "AWS, GCP, Azure, Cloudflare. Set up properly, scaled when you need them, idle when you don't."
+
+  - icon: "fa-money"
+    title: "Cloud Cost Optimization"
+    description: "Most cloud bills have 30-50% slack in them. We find it without dropping performance."
+
+  - icon: "fa-paint-brush"
+    title: "Brand & Identity Design"
+    description: "Logos, design systems, websites, app interfaces — visual work that fits the business behind it."
+
+  - icon: "fa-film"
+    title: "Animation & Motion"
+    description: "Scripted animation pieces with character. For product explainers, ad campaigns, brand films."
+
+  - icon: "fa-bullhorn"
+    title: "Marketing Campaigns"
+    description: "Real campaigns that grow real audiences. Social, content, ads — tied to actual business outcomes."
+
+  - icon: "fa-pencil"
+    title: "Content Production"
+    description: "Scripts, posts, videos, articles. Written by people who can read your room."
+
+  - icon: "fa-comments"
+    title: "Customer Support"
+    description: "We help businesses run support so the people buying from you actually feel taken care of."

@@ -1,12 +1,11 @@
 baseURL       = "https://codeovsky.com/"
 languageCode  = "en-us"
-title         = "CodeOvsky | Creative Design & Developement Studio"
+title         = "CodeOvsky | Web, Cloud, Design & Marketing for Growing Businesses"
 theme         = "roxo-hugo"
 summarylength = 25
 
 # Site Menus
 [menu]
-  # Navbar Menus
   [[menu.nav]]
     name    = "Home"
     url     = ""
@@ -24,63 +23,30 @@ summarylength = 25
     url     = "contact"
     weight  = 5
 
-# Site Params
 [params]
   logo = "images/logo.png"
   logo_footer = "images/logo-footer.png"
   favicon_icon = "images/favicon.ico"
   favicon_shortcut_icon = "images/favicon.png"
-  custom_stylesheets = []   # [ "scss/my_1.scss", "scss/my_2.scss" ]
-  dateFormat = "26 FEB 1994"
-  # Meta data
-  description = "Roxo Hugo themes | Design Agency Template by StaticMania"
-  author = "StaticMania"
-  # Google Analitycs
-  googleAnalitycsID = "Your ID"
-  # We're using formspree.io for form handling, paste your formspree url below
-  fabform  = "https://fabform.io/f/k2UJEfp"
+  custom_stylesheets = []
+  dateFormat = "2 Jan 2006"
+  description = "We help small and medium businesses grow — web apps, cloud, security, design, animation, and the campaigns to put it all in front of people."
+  author = "CodeOvsky"
+  googleAnalitycsID = ""
 
-  # Contact Form
-  [params.contactForm]
-    placeholder_first_name        = "First Name"
-    placeholder_last_name         = "Last Name"
-    placeholder_email             = "Email"
-    placeholder_project_type      = "Project Type"
-    placeholder_about_the_project = "About the Project"
-    send_message                  = "Send Message"
-
-    [[params.contactForm.projectType]]
-      value = "All"
-      title  = "All"
-    [[params.contactForm.projectType]]
-      value = "Branding"
-      title  = "Branding"
-    [[params.contactForm.projectType]]
-      value = "Graphic Design & Animation"
-      title  = "Graphic Design & Animation"
-    [[params.contactForm.projectType]]
-      value = "Web Design & Developement"
-      title  = "Web Design & Developement"
-    [[params.contactForm.projectType]]
-      value = "Digital Marketing"
-      title  = "Digital Marketing"
-  
-  # Navbar Action Button
   [params.navAction]
     status  = true
     name    = "Get in touch"
     url     = "contact"
-  
 
-  # Banner Section
   [params.banner]
     enable                = true
     background_image      = "images/backgrounds/hero-background.jpg"
-    heading               = "Design & Development Studio Fueling Great Ideas."
-    tagline               = "WE WORK HARD, WE PLAY HARD"
-    primary_button        = "See Our Works"
+    heading               = "We help businesses grow. Not gigs — partnerships."
+    tagline               = "WEB · CLOUD · DESIGN · GROWTH"
+    primary_button        = "See Our Work"
     primary_button_url    = "portfolio"
-    secondary_button      = "Connect with Us"
+    secondary_button      = "Get in Touch"
     secondary_button_url  = "contact"
 
   [params.blog]
@@ -88,8 +54,8 @@ summarylength = 25
 
   [params.portfolio]
     enable    = true
-    title     = "OUR RECENT WORKS"
-    subtitle  = "Crafting experiences and seeking to make the complex clear & beautiful."
+    title     = "REAL CLIENTS, REAL WORK"
+    subtitle  = "A few of the businesses we've helped build, run, and grow."
     view_project = "view project"
     more_works = "MORE WORKS"
     scroll_down = "scroll down"
@@ -97,47 +63,43 @@ summarylength = 25
   [params.call_to_action]
     enable              = true
     background_image    = "images/backgrounds/cta-background.jpg"
-    title               = "LET’S WORK TOGETHER"
-    primary_button      = "Submit Query"
+    title               = "LET'S BUILD SOMETHING GOOD"
+    primary_button      = "Start a Conversation"
     primary_button_url  = "contact"
-    secondary_button    = "Not Convinced"
+    secondary_button    = "See Our Work"
     secondary_button_url = "portfolio"
 
   [params.footer]
-    params.footer.qr_print = false
-    # Footer Contact Info
     [params.footer.contactInfo]
       title   = "Contact Info"
-      address = "Islamabad, Lahore & Peshawar"
-      phone   = "03355326446"
-      email   = ""
-      # Footer Sitemap
+      address = "Global"
+      phone   = ""
+      email   = "info@codeovsky.com"
+
       [params.footer.sitemap]
         title   = "Sitemap"
         [[params.footer.sitemap.link]]
-          name = "About Company"
+          name = "About"
           url  = "about"
         [[params.footer.sitemap.link]]
-          name = "Projects"
+          name = "Portfolio"
           url  = "portfolio"
         [[params.footer.sitemap.link]]
           name = "Contact"
           url  = "contact"
-      # Footer Social Media
+
       [params.footer.social]
-        title   = "Social Media"
+        title   = "Reach Us"
         [[params.footer.social.link]]
-          name = "Behance"
-          url  = "#"
-        [[params.footer.social.link]]
-          name = "Dribbble"
-          url  = "#"
+          name = "Email"
+          url  = "mailto:info@codeovsky.com"
         [[params.footer.social.link]]
           name = "Instagram"
-          url  = "#"
-      # Footer Service
+          url  = "https://www.instagram.com/ballondorsa/"
+
       [params.footer.service]
-        title       = "We help brands:"
-        description = "develop design solutions<br>produce valuable cultural content<br>create fresh brand experience"
+        title       = "We help businesses:"
+        description = "build the right things<br>cut the wrong costs<br>grow with people who care"
+
       [params.footer.back_to_top]
-        description = "I want to <br> visit again"
+        description = "Take me <br> back up"
