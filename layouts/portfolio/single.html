@@ -41,6 +41,34 @@
     </div>
   </div>
 
+  {{ with .Params.mobile_app }}
+  <section class="site-portfolio-single-mobile">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto text-center">
+          <h2>The mobile app</h2>
+          <p>Available on the Google Play Store. Same Lasikar workflows, redesigned for the phone.</p>
+          {{ with .store_url }}
+          <a href="{{ . }}" target="_blank" rel="noopener" class="site-portfolio-single-mobile-store">
+            <i class="fa fa-google-play"></i> {{ $.Params.mobile_app.store_label | default "Get the app" }}
+          </a>
+          {{ end }}
+        </div>
+      </div>
+
+      {{ with .screenshots }}
+      <div class="site-portfolio-single-mobile-screens">
+        {{ range . }}
+        <div class="site-portfolio-single-mobile-screens-item">
+          <img src="{{ . | absURL }}" alt="Lasikar mobile app screenshot" loading="lazy">
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
   {{ with .Params.animations }}
   <section class="site-portfolio-single-animations">
     <div class="container">

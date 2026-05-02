@@ -5,7 +5,7 @@ type: portfolio
 image: "images/projects/golden-seat-thumb.png"
 category: ["Platform", "Payments", "Events"]
 project_url: "https://golden-seat.com"
-project_images: ["images/projects/golden-seat-1.jpg", "images/projects/golden-seat-2.jpg"]
+project_images: [""]
 summary: "An events-and-experiences platform with built-in ticketing, payments, and infrastructure that doesn't burn money during quiet weeks."
 ---
 

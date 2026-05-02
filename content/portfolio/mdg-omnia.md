@@ -2,10 +2,10 @@
 title: "MDG OMNIA"
 date: 2026-05-01T12:00:00+05:00
 type: portfolio
-image: "images/projects/mdg-omnia-thumb.jpg"
+image: ""
 category: ["Web", "Security", "Performance"]
 project_url: "https://mdgomnia.com"
-project_images: ["images/projects/mdg-omnia-1.jpg", "images/projects/mdg-omnia-2.jpg"]
+project_images: [""]
 summary: "Third site in the MdG family — same playbook, tuned for what Omnia specifically needed."
 ---
 

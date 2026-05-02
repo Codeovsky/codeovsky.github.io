@@ -2,10 +2,15 @@
 title: "LASIKAR"
 date: 2026-05-01T12:00:00+05:00
 type: portfolio
-image: "images/projects/lasikar-thumb.jpg"
+image: "images/projects/lasikar-thumb.jpeg"
 category: ["SaaS", "AI", "Mobile App", "Cloud", "Animation"]
 project_url: "https://lasikar.com"
-project_images: ["images/projects/lasikar-1.jpg", "images/projects/lasikar-2.jpg"]
+project_images: []
+mobile_app:
+  store_url: "https://play.google.com/store/apps/details?id=com.lasikar.lasikar"
+  store_label: "Get it on Google Play"
+  screenshots:
+    - "images/projects/lasikar-mobile-1.jpeg"
 summary: "A SaaS suite, an AI layer, a mobile app, and the cloud setup running underneath. Plus the brand animations."
 animations:
   - title: "Intro to Business"
