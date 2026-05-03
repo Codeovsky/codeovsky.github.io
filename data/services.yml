@@ -10,6 +10,10 @@ services:
     title: "Mobile App Development"
     description: "iOS, Android, cross-platform. Apps people actually want to open — and that don't break on real devices."
 
+  - icon: "fa-shopping-cart"
+    title: "E-Commerce & Shopify"
+    description: "Storefronts that convert — Shopify builds, custom e-commerce, and the integrations that make selling online less painful."
+
   - icon: "fa-database"
     title: "Databases & Infrastructure"
     description: "Clean data models, fast queries, and the boring-but-critical plumbing that keeps everything running."

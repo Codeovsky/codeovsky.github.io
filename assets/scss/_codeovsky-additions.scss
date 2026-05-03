@@ -1088,7 +1088,7 @@ button.site-animations-card {
   }
 
   .navbar-brand img {
-    max-width: 140px; // new logo is wider than the old square one — bump up
+    max-width: 175px;
   }
 
   .nav-item .nav-link {
@@ -1139,20 +1139,30 @@ body:has(.site-hero) main { padding-top: 0; }
   body main { padding-top: 76px; }
 }
 
-// ---------- Hero: dark overlay so headline reads on any bg ----------
+// ---------- Hero: overlay + centering fix ----------
 .site-hero {
   position: relative;
-  overflow: hidden;        // kills horizontal scroll from overlay/bg
+  overflow: hidden;
+
+  // Fix desktop breakpoint losing flex centering
+  @include desktop {
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;   // safer than `inset` for older Bootstrap layouts
+    top: 0; left: 0; right: 0; bottom: 0;
     background: linear-gradient(
       135deg,
-      rgba(29, 35, 49, 0.88) 0%,
-      rgba(29, 35, 49, 0.70) 60%,
-      rgba(29, 35, 49, 0.92) 100%
+      rgba(29, 35, 49, 0.92) 0%,
+      rgba(29, 35, 49, 0.82) 60%,
+      rgba(29, 35, 49, 0.95) 100%
     );
     z-index: 1;
     pointer-events: none;
@@ -1177,6 +1187,7 @@ body:has(.site-hero) main { padding-top: 0; }
       text-transform: uppercase;
       font-size: 14px;
       margin-bottom: 18px;
+      margin-top: 70px;
     }
   }
 

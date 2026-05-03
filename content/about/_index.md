@@ -4,7 +4,7 @@ date: 2026-05-01T12:00:00+05:00
 heading: "We help businesses grow — and stick around for the long run."
 description: "We're a small group of designers, engineers, data folks and business people who got tired of seeing good businesses get lost in the noise. So we built Codeovsky."
 expertise_title: "What we work on"
-expertise_sectors: ["Web Applications", "Databases & Infrastructure", "Cyber Security", "Cloud Engineering", "Cloud Cost Optimization", "Brand & Identity Design", "Animation & Motion", "Mobile App Design", "Ad Campaigns", "Content Production", "Digital Marketing", "Customer Support"]
+expertise_sectors: ["Web Applications", "Mobile App Development", "E-Commerce & Shopify", "Databases & Infrastructure", "Cyber Security", "Cloud Engineering", "Cloud Cost Optimization", "Brand & Identity Design", "Animation & Motion", "Marketing Campaigns", "Content Production", "Customer Support"]
 ---
 
 ## What's in the name
