@@ -17,18 +17,26 @@ animations:
     description: "The first piece in the series — what running a small business feels like before you've got the right tools."
     image: "images/projects/animation-lasikar-intro.jpg"
     video: "videos/Lasikar - Intro to Business.mp4"
+
+  - title: "What is even Money?"
+    description: "Dodo finds a money and asks why dinosaurs slave away for paper. Dino explains barter, gold, fiat — and humanity's greatest shared delusion."
+    image: "images/projects/animation-what-is-even-money.jpg"
+    video: "videos/Lasikar - Dino Explains to Dodo - What Even Is Money.mp4"
+
   - title: "The Inventory Curse"
     description: "Anyone who's tracked stock on a spreadsheet will recognise this nightmare."
     image: "images/projects/animation-lasikar-inventory.jpg"
     video: "videos/Lasikar - Inventory Curse.mp4"
-  - title: "Kafka and the Bug"
-    description: "When the system that's supposed to help becomes the system you're fighting."
-    image: "images/projects/animation-lasikar-kafka.jpg"
-    video: "videos/Lasikar - Kafka and Bug.mp4"
+
   - title: "Surveillance Backfire"
     description: "On the temptation to micromanage — and what happens when the tools controlling everyone start controlling you."
     image: "images/projects/animation-lasikar-surveillance.jpg"
     video: "videos/Lasikar - Surveillance Backfire.mp4"
+
+  - title: "Kafka and the Bug"
+    description: "When the system that's supposed to help becomes the system you're fighting."
+    image: "images/projects/animation-lasikar-kafka.jpg"
+    video: "videos/Lasikar - Kafka and Bug.mp4"
 ---
 
 Lasikar is a suite of business tools — Lasikar OS, the SaaS app businesses run their day-to-day on; Lasikar AI, the intelligence layer on top; Lasikar Cloud, the infrastructure underneath; and the Lasikar mobile app that puts it all in your pocket. We've worked with the team across all of it.

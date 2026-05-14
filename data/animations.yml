@@ -8,6 +8,12 @@ reel:
     image: "images/projects/animation-lasikar-intro.jpg"
     video: "videos/Lasikar - Intro to Business.mp4"
 
+  - title: "What is even Money?"
+    client: "Lasikar"
+    description: "Dodo finds a money and asks why dinosaurs slave away for paper. Dino explains barter, gold, fiat — and humanity's greatest shared delusion."
+    image: "images/projects/animation-what-is-even-money.jpg"
+    video: "videos/Lasikar - Dino Explains to Dodo - What Even Is Money.mp4"
+
   - title: "The Inventory Curse"
     client: "Lasikar"
     description: "Anyone who's ever tracked stock on a spreadsheet will recognise this one. A familiar nightmare, animated."
