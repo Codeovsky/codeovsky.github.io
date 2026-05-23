@@ -23,6 +23,11 @@ animations:
     image: "images/projects/animation-what-is-even-money.jpg"
     video: "videos/Lasikar - Dino Explains to Dodo - What Even Is Money.mp4"
 
+  - title: "How Banks Make Money From Nothing"
+    description: "Dodo deposits 100 fish. Dino explains why they're not in the vault — and how banks legally conjure money from debt."
+    image: "images/projects/animation-lasikar-banks.jpg"
+    video: "videos/Lasikar - Dino Explains to Dodo - How Banks Make Money From Nothing.mp4"
+
   - title: "The Inventory Curse"
     description: "Anyone who's tracked stock on a spreadsheet will recognise this nightmare."
     image: "images/projects/animation-lasikar-inventory.jpg"
