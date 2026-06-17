@@ -1,0 +1,222 @@
+{{ define "main" }}
+<article class="site-team-page">
+
+  <header class="site-team-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          <span class="site-about-page-eyebrow">OUR TEAM</span>
+          <h1>{{ .Params.heading }}</h1>
+          <p class="site-team-lead">{{ .Params.description }}</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="site-team-grid">
+    <div class="container">
+      <div class="row justify-content-center">
+        {{ range .Params.members }}
+        <div class="col-lg-3 col-md-6 site-team-col">
+          <div class="site-team-card">
+
+            <div class="site-team-card__top" style="--accent: {{ .accent }};">
+              {{ if .image }}
+                <img src="{{ .image | relURL }}" alt="{{ .name }}" class="site-team-card__photo" />
+              {{ else }}
+                <div class="site-team-card__emoji-wrap">
+                  <span class="site-team-card__emoji">{{ .emoji }}</span>
+                </div>
+              {{ end }}
+            </div>
+
+            <div class="site-team-card__body">
+              <p class="site-team-card__role" style="color: {{ .accent }};">{{ .role }}</p>
+              <h3 class="site-team-card__name">{{ .name }}</h3>
+              <p class="site-team-card__bio">{{ .bio }}</p>
+              {{ if .email }}
+              <a href="mailto:{{ .email }}" class="site-team-card__email">
+                {{ .email }}
+              </a>
+              {{ end }}
+            </div>
+
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="site-about-page-cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto text-center">
+          <h2>Working on something?</h2>
+          <p>Tell us about it. We'll tell you honestly whether we can help.</p>
+          <a href="{{ "contact" | absURL }}" class="btn btn-primary">
+            <span class="btn-area">
+              <span data-text="Get in touch">Get in touch</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</article>
+
+<style>
+/* ── Header ─────────────────────────────────────── */
+.site-team-header {
+  padding: 80px 0 60px;
+}
+
+.site-team-header h1 {
+  font-size: clamp(32px, 4vw, 50px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 12px 0 20px;
+}
+
+.site-team-lead {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Grid ────────────────────────────────────────── */
+.site-team-grid {
+  padding: 0 0 80px;
+}
+
+.site-team-col {
+  margin-bottom: 28px;
+}
+
+/* ── Card ────────────────────────────────────────── */
+.site-team-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.site-team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.10);
+}
+
+/* ── Card top (avatar area) ──────────────────────── */
+.site-team-card__top {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: color-mix(in srgb, var(--accent) 10%, #f5f5f5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.site-team-card__top::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent);
+}
+
+.site-team-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.site-team-card__emoji-wrap {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.site-team-card__emoji {
+  font-size: 42px;
+  line-height: 1;
+}
+
+/* ── Card body ───────────────────────────────────── */
+.site-team-card__body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-team-card__role {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.site-team-card__name {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #111;
+}
+
+.site-team-card__bio {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0 0 16px;
+  flex: 1;
+}
+
+.site-team-card__email {
+  font-size: 13px;
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 2px;
+  display: inline-block;
+  transition: border-color 0.2s, color 0.2s;
+  word-break: break-all;
+}
+
+.site-team-card__email:hover {
+  color: #2F8800;
+  border-color: #2F8800;
+}
+
+/* ── Fallback for browsers without color-mix ─────── */
+@supports not (background: color-mix(in srgb, red 10%, blue)) {
+  .site-team-card__top {
+    background: #f5f5f5;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-team-header {
+    padding: 60px 0 40px;
+  }
+}
+</style>
+
+{{ end }}
