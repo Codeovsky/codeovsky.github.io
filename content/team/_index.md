@@ -1,0 +1,28 @@
+---
+title: "The Team"
+date: 2026-01-01T12:00:00+05:00
+heading: "The people behind the work."
+description: "Small team. Direct access. No layers in the way."
+members:
+  - name: "Shakeel Anwar"
+    role: "CEO"
+    bio: "Shakeel is the first call you make and the last person to leave a meeting. He manages client relationships — which at CodeOvsky means he's equal parts strategist, translator, and trusted advisor. He makes sure what we build is what you actually needed."
+    email: "shakeel@codeovsky.com"
+    image: "images/team/shakeel.jpeg"
+    accent: "#8EFE01"
+  - name: "Nabeel"
+    role: "CTO"
+    bio: "Nabeel runs the technical side. Architecture, code quality, infrastructure decisions — if it gets shipped, it passed through him. He's the reason the things we build don't fall apart at 2am."
+    emoji: "🧑‍💻"
+    accent: "#8EFE01"
+  - name: "Adeel"
+    role: "CFO"
+    bio: "Adeel keeps the numbers honest. Budgets, billing, financial planning — and the voice that quietly stops good ideas from becoming expensive mistakes. Every good studio needs someone asking the hard questions about money. That's Adeel."
+    emoji: "💼"
+    accent: "#00D4FF"
+  - name: "Osama"
+    role: "CMO"
+    bio: "Osama owns growth and marketing. Strategy, campaigns, content — the work that gets what we build in front of the people who need it. He's why clients find us before the competition finds them."
+    emoji: "🚀"
+    accent: "#FF6B35"
+---
